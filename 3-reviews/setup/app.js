@@ -53,15 +53,36 @@ let currentItem = 0;
 
 // load initial item
 window.addEventListener('DOMContentLoaded', () => {
+    showPerson();
+});
+
+// show person based on item
+showPerson = () => {
     console.log('shake and bake');
     const item = reviews[currentItem];
     img.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
     info.textContent = item.text;
-});
+}
 
+// show next person
+nextBtn.addEventListener('click', () => {
+    currentItem++;
+    if(currentItem > reviews.length - 1) {
+        currentItem = 0; // doing it in circle
+    }
+    showPerson();
+})
 
+// show prev person
+prevBtn.addEventListener('click', () => {
+    currentItem--;
+    if(currentItem < 0) {
+        currentItem = reviews.length - 1; // doing it in circle
+    }
+    showPerson();
+})
 
 
 
