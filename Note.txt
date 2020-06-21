@@ -11,3 +11,6 @@ C:\react\javascript-basic-projects\1-color-flipper\setup>npm init -y
 C:\react\javascript-basic-projects\1-color-flipper\setup>npm run start
 http://localhost:3000/index.html
 http://localhost:3000/hex.html
+
+
+C:\react\javascript-basic-projects\2-counter\setup>npm run start
