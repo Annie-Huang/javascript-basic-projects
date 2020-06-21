@@ -14,11 +14,11 @@ http://localhost:3000/hex.html
 
 
 C:\react\javascript-basic-projects\2-counter\setup>npm run start
-C:\react\javascript-basic-projects\3-reviews\setup>npm run start
+C:\react\javascript-basic-projects\3-reviews\setup>npm run start        << prev and next button
 C:\react\javascript-basic-projects\4-navbar\setup>npm run start
 C:\react\javascript-basic-projects\5-sidebar\setup>npm run start
 C:\react\javascript-basic-projects\6-modal\setup>npm run start
-C:\react\javascript-basic-projects\7-questions\setup>npm run start
+C:\react\javascript-basic-projects\7-questions\setup>npm run start      << accordion
 
 Special event that you can listen to:
 - DOMContentLoaded      << when page is loaded.
