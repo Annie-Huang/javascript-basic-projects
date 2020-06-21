@@ -15,7 +15,7 @@ http://localhost:3000/hex.html
 
 C:\react\javascript-basic-projects\2-counter\setup>npm run start
 C:\react\javascript-basic-projects\3-reviews\setup>npm run start
-
+C:\react\javascript-basic-projects\4-navbar\setup>npm run start
 
 
 Special event that you can listen to:
