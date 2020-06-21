@@ -1,0 +1,11 @@
+Build 15 JavaScript Projects - Vanilla JavaScript Course
+https://www.youtube.com/watch?v=3PHXvlpOkf4&t=1s
+
+https://www.johnsmilga.com/projects
+https://www.vanillajavascriptprojects.com/
+
+https://github.com/Annie-Huang/javascript-basic-projects
+================================================================
+
+C:\react\javascript-basic-projects\1-color-flipper\setup>npm init -y
+C:\react\javascript-basic-projects\1-color-flipper\setup>npm run start
