@@ -29,3 +29,4 @@ e.currentTarget.parentElement
 From parent to child:
 const parent = document.querySelector('.xxx');
 const child = parent.querySelector('.yyy')
+(if you want to implement closing other accordions when one accordion is open, it's much easier to do it form top-down)
