@@ -6,9 +6,13 @@ btn.addEventListener('click', () => {
     // console.log(document.body);
 
     // get random number between 0 - 3
+    const randomNumber = getRandomNumber();
+    console.log(randomNumber)
     const random = 2;
-    document.body.style.backgroundColor = colors[random];
-    color.textContent = colors[random]
+    document.body.style.backgroundColor = colors[randomNumber];
+    color.textContent = colors[randomNumber]
 })
 
-
+getRandomNumber = () => {
+    return Math.floor(Math.random() * colors.length);
+}
