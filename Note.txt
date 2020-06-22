@@ -28,6 +28,15 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+<button class="filter-btn" type="button" data-id="all">all</button>
+btn.addEventListener('click', e => {
+    // console.log(e.currentTarget.dataset); // DOMStringMap {id: "all"}
+    console.log(e.currentTarget.dataset.id);
+});
+
+
+
+
 From child to the parent:
 e.currentTarget.parentElement
 
