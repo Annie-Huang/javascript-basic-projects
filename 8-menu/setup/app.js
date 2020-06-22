@@ -82,7 +82,7 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector('.section-center');
-const filterBtns = document.querySelectorAll('.filter-btn');
+// const filterBtns = document.querySelectorAll('.filter-btn');
 const btnContainer = document.querySelector('.btn-container');
 
 // load items
@@ -97,21 +97,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const categories = ['all', ...new Set(menu.map(item => item.category))];
     console.log(categories);
     displayFilteredBtn(categories);
+    setupFilteredBtnAction();
 
     displayMenuItem(menu);
 });
 
-// filter items
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-        // console.log(e.currentTarget.dataset); // DOMStringMap {id: "all"}
-        console.log(e.currentTarget.dataset.id);
-        const category = e.currentTarget.dataset.id;
-        const menuCategory = menu.filter(menuItem => (category === 'all' || menuItem.category === category));
-        console.log(menuCategory);
-        displayMenuItem(menuCategory);
+setupFilteredBtnAction = () => {
+    // filter items
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', e => {
+            // console.log(e.currentTarget.dataset); // DOMStringMap {id: "all"}
+            console.log(e.currentTarget.dataset.id);
+            const category = e.currentTarget.dataset.id;
+            const menuCategory = menu.filter(menuItem => (category === 'all' || menuItem.category === category));
+            console.log(menuCategory);
+            displayMenuItem(menuCategory);
+        });
     });
-});
+}
 
 const displayFilteredBtn = (categories)  => {
     let displayBtn = categories.map(category => {
