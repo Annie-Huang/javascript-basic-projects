@@ -23,6 +23,10 @@ C:\react\javascript-basic-projects\8-menu\setup>npm init -y
 
 Special event that you can listen to:
 - DOMContentLoaded      << when page is loaded.
+window.addEventListener('DOMContentLoaded', () => {
+    showPerson();
+});
+
 
 From child to the parent:
 e.currentTarget.parentElement
