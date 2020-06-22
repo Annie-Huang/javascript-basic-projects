@@ -87,6 +87,14 @@ const btnContainer = document.querySelector('.btn-container');
 
 // load items
 window.addEventListener('DOMContentLoaded', () => {
+    displayFilteredBtn();
+
+    displayMenuItem(menu);
+});
+
+const displayFilteredBtn = ()  => {
+    // Get unique categories.
+
     // Author way to creating the categories.
     // const categories = menu.reduce((values,item) => {
     //     if(!values.includes(item.category)) {
@@ -96,14 +104,15 @@ window.addEventListener('DOMContentLoaded', () => {
     // }, ['all']);
     const categories = ['all', ...new Set(menu.map(item => item.category))];
     console.log(categories);
-    displayFilteredBtn(categories);
-    setupFilteredBtnAction();
 
-    displayMenuItem(menu);
-});
+    // Create button group html.
+    const displayBtn = categories
+        .map(category => `<button class="filter-btn" type="button" data-id="${category}">${category}</button>`)
+        .join('');
+    console.log(displayBtn);
+    btnContainer.innerHTML = displayBtn;
 
-setupFilteredBtnAction = () => {
-    // filter items
+    // Add listeners to buttons
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', e => {
@@ -117,14 +126,6 @@ setupFilteredBtnAction = () => {
     });
 }
 
-const displayFilteredBtn = (categories)  => {
-    let displayBtn = categories.map(category => {
-        return `<button class="filter-btn" type="button" data-id="${category}">${category}</button>`;
-    });
-    displayBtn = displayBtn.join('');
-    console.log(displayBtn);
-    btnContainer.innerHTML = displayBtn;
-}
 const displayMenuItem = (menuItems) => {
     console.log('shake and bake');
 
