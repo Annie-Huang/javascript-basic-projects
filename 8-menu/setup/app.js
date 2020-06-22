@@ -71,13 +71,26 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 
 const sectionCenter = document.querySelector('.section-center');
 const filterBtns = document.querySelectorAll('.filter-btn');
+const btnContainer = document.querySelector('.btn-container');
 
 // load items
 window.addEventListener('DOMContentLoaded', () => {
+    const categories = ['all', ...new Set(menu.map(item => item.category))];
+    console.log(categories);
+    displayFilteredBtn(categories);
+
     displayMenuItem(menu);
 });
 
@@ -93,7 +106,14 @@ filterBtns.forEach(btn => {
     });
 });
 
-
+const displayFilteredBtn = (categories)  => {
+    let displayBtn = categories.map(category => {
+        return `<button class="filter-btn" type="button" data-id="${category}">${category}</button>`;
+    });
+    displayBtn = displayBtn.join('');
+    console.log(displayBtn);
+    btnContainer.innerHTML = displayBtn;
+}
 const displayMenuItem = (menuItems) => {
     console.log('shake and bake');
 
