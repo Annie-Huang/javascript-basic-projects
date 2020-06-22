@@ -87,6 +87,13 @@ const btnContainer = document.querySelector('.btn-container');
 
 // load items
 window.addEventListener('DOMContentLoaded', () => {
+    // Author way to creating the categories.
+    // const categories = menu.reduce((values,item) => {
+    //     if(!values.includes(item.category)) {
+    //         values.push(item.category);
+    //     }
+    //     return values;
+    // }, ['all']);
     const categories = ['all', ...new Set(menu.map(item => item.category))];
     console.log(categories);
     displayFilteredBtn(categories);
