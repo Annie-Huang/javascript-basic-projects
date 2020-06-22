@@ -35,8 +35,6 @@ btn.addEventListener('click', e => {
 });
 
 
-
-
 From child to the parent:
 e.currentTarget.parentElement
 
