@@ -76,9 +76,13 @@ const menu = [
 const sectionCenter = document.querySelector('.section-center');
 
 window.addEventListener('DOMContentLoaded', () => {
+    displayMenuItem(menu);
+});
+
+const displayMenuItem = (menuItems) => {
     console.log('shake and bake');
 
-    let displayMenu = menu.map(item => {
+    let displayMenu = menuItems.map(item => {
         // console.log(item);
         return `
             <article class="menu-item">
@@ -97,9 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(displayMenu);
 
     sectionCenter.innerHTML = displayMenu;
-});
-
-
+}
 
 
 
