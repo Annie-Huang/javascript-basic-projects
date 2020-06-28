@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "lite-server --baseDir=./9-video/setup/"
+    "start": "lite-server --baseDir=./10-scroll/setup/"
   },
   "keywords": [],
   "author": "",
