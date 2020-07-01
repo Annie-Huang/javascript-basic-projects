@@ -16,7 +16,7 @@ navToggle.addEventListener('click', () => {
     // linksContainer.classList.toggle('show-links');
 
     const containerHeight = linksContainer.getBoundingClientRect().height;
-    console.log(containerHeight);
+    console.log('containerHeight=', containerHeight);
 
     const linksHeight = links.getBoundingClientRect().height;
     console.log(links.getBoundingClientRect());
@@ -65,8 +65,14 @@ scrollLinks.forEach(link => {
         //navigate to specific spot
         // <a href="#home" class="scroll-link">home</a> will return 'home'
         const id = e.currentTarget.getAttribute('href').slice(1);
-        console.log(id);
+        console.log('id=', id);
         const element = document.getElementById(id);
+        let position = element.offsetTop;
+        console.log('position=', position);
+        window.scrollTo({
+            left:0,
+            top: position
+        });
     });
 });
 
