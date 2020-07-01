@@ -38,11 +38,17 @@ window.addEventListener('scroll', () => {
     const scrollHeight = window.pageYOffset;
     const navHeight = navbar.getBoundingClientRect().height;
 
-    // If user scroll down the page pass the height of the navbar, set the navbar to a fix position.
+    // If user scroll down the page pass the height of the navbar, set the navbar to a fix position (on tthe top)..
     if (scrollHeight > navHeight) {
         navbar.classList.add('fixed-nav');
     } else {
         navbar.classList.remove('fixed-nav');
+    }
+
+    if (scrollHeight > 500) {
+        topLink.classList.add('show-link');
+    } else {
+        topLink.classList.remove('show-link');
     }
 });
 
