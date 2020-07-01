@@ -67,8 +67,26 @@ scrollLinks.forEach(link => {
         const id = e.currentTarget.getAttribute('href').slice(1);
         console.log('id=', id);
         const element = document.getElementById(id);
-        let position = element.offsetTop;
+
+        // calculate the heights
+        const navHeight = navbar.getBoundingClientRect().height;  // same as line 39, it's the totally nav bar height, including the nav-header and links-container
+        const containerHeight = linksContainer.getBoundingClientRect().height;  // same as line 18
+        const fixedNav = navbar.classList.contains('fixed-nav');
+
+        console.log('element.offsetTop=', element.offsetTop);
+        console.log('navHeight=', navHeight);
+        let position = element.offsetTop - navHeight;
         console.log('position=', position);
+
+        // This is to cater for the desktop version, on the top of the page without any scroll
+        if(!fixedNav) {
+            position = position - navHeight;
+        }
+        // This is to cater for the mobile version, when the links-container is showed. nav-center height is 82. For desktop, the nav-center will always smaller than 82
+        if (navHeight > 82) {
+            position = position + containerHeight;
+        }
+
         window.scrollTo({
             left:0,
             top: position
