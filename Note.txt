@@ -24,6 +24,7 @@ C:\react\javascript-basic-projects\7-questions      << accordion
 C:\react\javascript-basic-projects\8-menu           << Create the menu html element from array input. Create html filtered button from array input. Action filter according to clicks
 C:\react\javascript-basic-projects\9-video          << Good explanation of DOMContentLoaded vs load event for window
 C:\react\javascript-basic-projects\10-scroll
+C:\react\javascript-basic-projects\11-tabs
 
 Special event that you can listen to:
 - DOMContentLoaded      << when page is loaded.
