@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "lite-server --baseDir=./11-tabs/setup/"
+    "start": "lite-server --baseDir=./12-countdown-timer/setup/"
   },
   "keywords": [],
   "author": "",
