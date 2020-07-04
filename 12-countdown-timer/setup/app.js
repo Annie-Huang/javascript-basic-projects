@@ -27,11 +27,18 @@ const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 // console.log(items);
 
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+
 // let futureDate = new Date();
 
 // Tue Aug 25 2020 11:30:00 GMT+1000 (Australian Eastern Standard Time)
 // month start from 0, other fields are matching the number.
-let futureDate = new Date(2020, 7, 25, 11,30, 0);
+// let futureDate = new Date(2020, 7, 25, 11,30, 0);
+let futureDate = new Date(tempYear, tempMonth, tempDay+10, 0,0, 0);
 console.log(futureDate);
 
 const year = futureDate.getFullYear();
