@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "lite-server --baseDir=./13-lorem-ipsum/setup/"
+    "start": "lite-server --baseDir=./14-todo/setup/"
   },
   "keywords": [],
   "author": "",

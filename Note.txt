@@ -29,6 +29,7 @@ C:\react\javascript-basic-projects\10-scroll
 C:\react\javascript-basic-projects\11-tabs
 C:\react\javascript-basic-projects\12-countdown-timer
 C:\react\javascript-basic-projects\13-lorem-ipsum
+C:\react\javascript-basic-projects\14-todo
 
 Special event that you can listen to:
 - DOMContentLoaded      << when page is loaded.
