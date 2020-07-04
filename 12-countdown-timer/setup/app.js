@@ -29,9 +29,9 @@ const items = document.querySelectorAll('.deadline-format h4');
 
 // let futureDate = new Date();
 
-// Mon May 25 2020 11:30:00 GMT+1000 (Australian Eastern Standard Time)
+// Tue Aug 25 2020 11:30:00 GMT+1000 (Australian Eastern Standard Time)
 // month start from 0, other fields are matching the number.
-let futureDate = new Date(2020, 4, 25, 11,30, 0);
+let futureDate = new Date(2020, 7, 25, 11,30, 0);
 console.log(futureDate);
 
 const year = futureDate.getFullYear();
@@ -43,11 +43,48 @@ const weekday  = weekdays[futureDate.getDay()];
 
 giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`
 
+// future time in ms
+const futureTime = futureDate.getTime();
+console.log(futureTime);
+
+function getRemainingTime() {
+    const today = new Date().getTime();
+    console.log(today);
+
+    const t = futureTime - today;
+    console.log(t);
+    // 1s = 1000ms
+    // 1m = 60s
+    // 1hr = 60min
+    // 1d = 24hr
+
+    // values in ms
+    const oneDay = 24*60*60*1000;
+    // console.log(oneDay);
+    const oneHour = 60*60*1000;
+    const oneMinute = 60*1000;
+
+    // calculate all values:
+    let days = Math.floor(t/oneDay);
+    console.log(days);
+    let hours = Math.floor((t % oneDay) / oneHour);
+    console.log(hours);
+    let minutes = Math.floor((t % oneHour) / oneMinute);
+    console.log(minutes);
+    let seconds = Math.floor((t % oneMinute) / 1000);
+    console.log(seconds);
+
+    // set values array
+    const values = [days, hours, minutes, seconds];
+
+    items.forEach((item, index) => {
+        item.innerHTML = values[index];
+    });
 
 
+}
 
-
-
+getRemainingTime();
 
 
 
