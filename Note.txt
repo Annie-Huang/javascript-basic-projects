@@ -5,6 +5,8 @@ https://www.johnsmilga.com/projects
 https://www.vanillajavascriptprojects.com/
 
 https://github.com/Annie-Huang/javascript-basic-projects
+
+https://hipsum.co/
 ================================================================
 
 C:\react\javascript-basic-projects\1-color-flipper\setup>npm init -y
@@ -25,6 +27,8 @@ C:\react\javascript-basic-projects\8-menu           << Create the menu html elem
 C:\react\javascript-basic-projects\9-video          << Good explanation of DOMContentLoaded vs load event for window
 C:\react\javascript-basic-projects\10-scroll
 C:\react\javascript-basic-projects\11-tabs
+C:\react\javascript-basic-projects\12-countdown-timer
+C:\react\javascript-basic-projects\13-lorem-ipsum
 
 Special event that you can listen to:
 - DOMContentLoaded      << when page is loaded.
