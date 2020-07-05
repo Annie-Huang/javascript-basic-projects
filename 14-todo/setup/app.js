@@ -70,7 +70,10 @@ function addItem(e) {
 
 
     } else if (value && editFlag) {
-        console.log('editing');
+        editElement.innerHTML = value;
+        displayAlert('value changed', 'success');
+        setBackToDefault();
+
 
     } else {
         displayAlert('empty value', 'danger');
