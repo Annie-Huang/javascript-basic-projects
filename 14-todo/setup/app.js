@@ -17,6 +17,9 @@ let editID = '';
 form.addEventListener('submit', addItem);
 // clear items
 clearBtn.addEventListener('click', clearItems);
+// load items
+window.addEventListener('DOMContentLoaded', setupItems);
+
 
 // ****** FUNCTIONS **********
 function addItem(e) {
@@ -183,3 +186,10 @@ function getLocalStorage() {
 // localStorage.removeItem('orange');
 
 // ****** SETUP ITEMS **********
+function setupItems() {
+    let items = getLocalStorage();
+    if (items.length > 0) {
+
+    }
+}
+
