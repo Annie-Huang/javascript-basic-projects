@@ -92,11 +92,16 @@ function displayAlert(text, action) {
 // delete function
 function deleteItem(e) {
     const element = e.currentTarget.parentElement.parentElement; // <article class="grocery-item">
+    const id = element.dataset.id;
     list.removeChild(element);
     if (list.children.length === 0) {
         constainer.classList.remove('show-container');
     }
     displayAlert('item removed', 'danger');
+
+    setBackToDefault();
+    // remove from local storage
+    removeFromLocalStorage(id);
 }
 // edit function
 function editItem() {
@@ -129,7 +134,10 @@ function clearItems() {
 }
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {
-    console.log('added to local storage');
+    // console.log('added to local storage');
+}
+function removeFromLocalStorage(id) {
+
 }
 
 
