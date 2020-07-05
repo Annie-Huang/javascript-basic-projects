@@ -20,6 +20,14 @@ prevBtn.addEventListener('click', () => {
 // -200% > show 3rd one.
 // -300% > show 4th one.
 function carousel() {
+    // working with slides: circulate.
+    if (counter === slides.length) {
+        counter = 0;
+    }
+    if (counter < 0) {
+        counter = slides.length - 1;
+    }
+
     slides.forEach(slide => {
         slide.style.transform = `translateX(-${counter*100}%)`;
     });
