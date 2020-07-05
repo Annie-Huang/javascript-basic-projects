@@ -90,8 +90,13 @@ function displayAlert(text, action) {
 }
 
 // delete function
-function deleteItem() {
-    console.log('item deleted');
+function deleteItem(e) {
+    const element = e.currentTarget.parentElement.parentElement; // <article class="grocery-item">
+    list.removeChild(element);
+    if (list.children.length === 0) {
+        constainer.classList.remove('show-container');
+    }
+    displayAlert('item removed', 'danger');
 }
 // edit function
 function editItem() {
