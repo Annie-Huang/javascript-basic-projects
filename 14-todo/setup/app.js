@@ -101,6 +101,9 @@ function clearItems() {
     }
     constainer.classList.remove('show-container');
     displayAlert('empty list', 'danger');
+    
+    setBackToDefault();
+    // localStorage.removeItem('list');
 }
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {
