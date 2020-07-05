@@ -104,8 +104,15 @@ function deleteItem(e) {
     removeFromLocalStorage(id);
 }
 // edit function
-function editItem() {
-    console.log('edit item');
+function editItem(e) {
+    const element = e.currentTarget.parentElement.parentElement; // <article class="grocery-item">
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling; // <p class="title">item</p>
+    // set form value
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dataset.id;
+    submitBtn.textContent = 'edit';
 }
 
 
