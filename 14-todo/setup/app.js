@@ -143,7 +143,7 @@ function clearItems() {
     displayAlert('empty list', 'danger');
 
     setBackToDefault();
-    // localStorage.removeItem('list');
+    localStorage.removeItem('list');
 }
 
 // ****** LOCAL STORAGE **********
