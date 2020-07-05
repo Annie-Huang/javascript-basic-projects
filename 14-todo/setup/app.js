@@ -164,7 +164,8 @@ function getLocalStorage() {
 function setupItems() {
     let items = getLocalStorage();
     if (items.length > 0) {
-
+        items.forEach(item => createListItem(item.id, item.value));
+        constainer.classList.add('show-container');
     }
 }
 
