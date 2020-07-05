@@ -21,13 +21,33 @@ form.addEventListener('submit', addItem);
 // ****** FUNCTIONS **********
 function addItem(e) {
     e.preventDefault();
-    console.log(grocery.value);
+    // console.log(grocery.value);
     const value = grocery.value;
     const id = new Date().getTime().toString();
-    console.log(id);
+    // console.log(id);
+
+    if(value && !editFlag) {
+        console.log('add item to the list');
+
+    } else if (value && editFlag) {
+        console.log('editing');
+
+    } else {
+        displayAlert('empty value', 'danger');
+    }
 }
 
+// display alert
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
 
+    // remove alert
+    setTimeout(() => {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    }, 1000);
+}
 
 
 // ****** LOCAL STORAGE **********
