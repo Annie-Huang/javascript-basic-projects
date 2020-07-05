@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "lite-server --baseDir=./14-todo/setup/"
+    "start": "lite-server --baseDir=./15-slider/setup/"
   },
   "keywords": [],
   "author": "",
