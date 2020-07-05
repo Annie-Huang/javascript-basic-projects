@@ -72,6 +72,8 @@ function addItem(e) {
     } else if (value && editFlag) {
         editElement.innerHTML = value;
         displayAlert('value changed', 'success');
+        // edit local storage
+        editLocalStorage(editID, value);
         setBackToDefault();
 
 
@@ -122,6 +124,7 @@ function editItem(e) {
 // set back to default
 function setBackToDefault() {
     grocery.value= '';
+    // If it also reset editElement, it will look cleaner.
     editFlag = false;
     editID = '';
     submitBtn.textContent = 'submit'
@@ -146,9 +149,8 @@ function clearItems() {
 function addToLocalStorage(id, value) {
     // console.log('added to local storage');
 }
-function removeFromLocalStorage(id) {
-
-}
+function removeFromLocalStorage(id) {}
+function editLocalStorage(id, value) {}
 
 
 // ****** SETUP ITEMS **********
